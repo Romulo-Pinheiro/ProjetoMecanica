@@ -1,0 +1,1 @@
+Ordem de serviço: CPF do cliente -> 000.000.000-00 -> CPF do mecanico -> 000.000.000-00 -> Valor do servico -> 250.0 -> Descricao do Servico -> Consertar freios
