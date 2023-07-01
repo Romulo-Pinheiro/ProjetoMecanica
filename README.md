@@ -30,4 +30,5 @@ nome do usuário ; cpf ; senha ; nível de acesso (1, 2 ou 3)
 
 ### cliente.txt, orcamento.txt, ordemServico.txt  
 Campos separados por setas para direita (->)  
-Chave -> Valor
+Chave -> Valor  
+<p align="center">Made by Romulo Pinheiro</p>
