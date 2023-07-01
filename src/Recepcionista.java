@@ -16,20 +16,20 @@ public class Recepcionista extends Funcionario {
 
     public void CadastrarOrcamento(String cpfCliente, String cpfMecanico, Double valor, String servico) throws IOException{
         Orcamento orcamento = new Orcamento(cpfCliente, cpfMecanico, valor, servico);
-        Arquivos.escritor(orcamento.toString(), "src/orcamento.txt", true);
+        Arquivos.escritor(orcamento.toString(), "orcamento.txt", true);
     }
     
     public void CriarOrdemServico(String cpfCliente, String cpfMecanico, Double valor, String servico) throws IOException{
         OrdemServico ordemServico = new OrdemServico(cpfCliente, cpfMecanico, valor, servico);
-        Arquivos.escritor(ordemServico.toString(), "src/ordemServico.txt", true);
+        Arquivos.escritor(ordemServico.toString(), "ordemServico.txt", true);
     }
 
     public void cadastrarCliente(String nome, String cpf, String email, String telefone, String endereco, String placa) throws IOException{
         Cliente cliente = new Cliente(nome, cpf, email, telefone, endereco, placa);
-        Arquivos.escritor(cliente.toString(), "src/cliente.txt", true);
+        Arquivos.escritor(cliente.toString(), "cliente.txt", true);
     }
 
     public void deletarOrcamento(int indice) throws IOException{
-        Arquivos.deletarLinha("src/orcamento.txt", indice);
+        Arquivos.deletarLinha("orcamento.txt", indice);
     }
 }

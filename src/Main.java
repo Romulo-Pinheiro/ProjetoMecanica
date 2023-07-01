@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author ALUNO
  */
-public class Telas2 {
+public class Main {
     
     public static void main(String[] args) throws IOException {
         System.out.println("Seja bem vindo ao sistema Car!");
@@ -40,9 +40,8 @@ public class Telas2 {
     }
     
     private static void login(String nome, String senha) throws IOException{
-            // Agr ao invés de ter o código do prof só para percorrer o arquivo teremos o método Arquivos.percorreArquivo 
             boolean loginEfetuado = false;
-            ArrayList<String> result = Arquivos.percorreArquivo("src/funcionario.txt");
+            ArrayList<String> result = Arquivos.percorreArquivo("funcionario.txt");
 
             for (String s : result) {
                 //Usamos o método split da classe String
@@ -90,7 +89,7 @@ public class Telas2 {
                 case 1:
                     int opcGerente = 0;
                     do{
-                        Arquivos.exibeArquivo("src/funcionario.txt");
+                        Arquivos.exibeArquivo("funcionario.txt");
                         System.out.println("\nDigite: \n 1- Para CADASTRAR funcionário \n 2 - Para DELETAR funcionário \n 3 - Para sair.");
                         opcGerente = Integer.parseInt(input.nextLine());
                         switch(opcGerente){
@@ -116,7 +115,7 @@ public class Telas2 {
                                 break;
 
                             case 2:
-                                ArrayList<String> arquivo = Arquivos.percorreArquivo("src/funcionario.txt");
+                                ArrayList<String> arquivo = Arquivos.percorreArquivo("funcionario.txt");
                                 if (arquivo != null && !arquivo.isEmpty()){
                                     System.out.println("Digite o índice do FUNCIONÁRIO que deseja deletar: ");
                                     int indice = Integer.parseInt(input.nextLine());
@@ -141,11 +140,11 @@ public class Telas2 {
                     break;
 
                 case 2:
-                    Arquivos.exibeArquivo("src/ordemServico.txt");
+                    Arquivos.exibeArquivo("ordemServico.txt");
                     System.out.println("Digite: \n 1 - Para deletar uma ORDEM DE SERVIÇO. \n 2 - Para sair.");
                     int deletar = Integer.parseInt(input.nextLine());
                     if (deletar == 1){
-                        ArrayList<String> arquivo = Arquivos.percorreArquivo("src/ordemServico.txt");
+                        ArrayList<String> arquivo = Arquivos.percorreArquivo("ordemServico.txt");
                         if (arquivo != null && !arquivo.isEmpty()){
                             System.out.println("Digite o índice da ORDEM DE SERVIÇO que deseja deletar: ");
                             int indice = Integer.parseInt(input.nextLine());
@@ -160,12 +159,12 @@ public class Telas2 {
                     } break;
 
                 case 3:
-                    Arquivos.exibeArquivo("src/cliente.txt");
+                    Arquivos.exibeArquivo("cliente.txt");
                     deletar = 0;
                     System.out.println("Digite: \n 1 - Para deletar um CLIENTE. \n 2 - Para sair.");
                     deletar = Integer.parseInt(input.nextLine());
                     if (deletar == 1){
-                        ArrayList<String> arquivo = Arquivos.percorreArquivo("src/cliente.txt");
+                        ArrayList<String> arquivo = Arquivos.percorreArquivo("cliente.txt");
                         if (arquivo != null && !arquivo.isEmpty()){
                             System.out.println("Digite o índice do CLIENTE que deseja deletar: ");
                             int indice = Integer.parseInt(input.nextLine());
@@ -198,11 +197,11 @@ public class Telas2 {
         op = Integer.parseInt(input.nextLine());
         switch(op){
             case 1:
-                Arquivos.exibeArquivo("src/orcamento.txt");
+                Arquivos.exibeArquivo("orcamento.txt");
                 break;
             
             case 2:
-                Arquivos.exibeArquivo("src/ordemServico.txt");
+                Arquivos.exibeArquivo("ordemServico.txt");
                 break;
             
             case 3:
@@ -252,13 +251,13 @@ private static void telaRecepcionista(Recepcionista recepcionista) throws IOExce
 
         case 2:
             transfos = 0;
-            Arquivos.exibeArquivo("src/orcamento.txt");
+            Arquivos.exibeArquivo("orcamento.txt");
             do{
             System.out.println("\nDigite: \n1- Para transformar um ORÇAMENTO em ORDEM DE SERVIÇO. \n2- Para deletar um ORÇAMENTO. \n3- Para sair");
             transfos = Integer.parseInt(input.nextLine());
             switch(transfos){
                 case 1:
-                    ArrayList<String> linhas = Arquivos.percorreArquivo("src/orcamento.txt");
+                    ArrayList<String> linhas = Arquivos.percorreArquivo("orcamento.txt");
                     if (linhas != null && !linhas.isEmpty()){
                         System.out.println("Digite o índice do orçamento que deseja alterar: ");
                         int indice = Integer.parseInt(input.nextLine());
@@ -279,7 +278,7 @@ private static void telaRecepcionista(Recepcionista recepcionista) throws IOExce
                     
 
                 case 2:
-                    ArrayList<String> arquivo = Arquivos.percorreArquivo("src/orcamento.txt");
+                    ArrayList<String> arquivo = Arquivos.percorreArquivo("orcamento.txt");
                     if (arquivo != null && !arquivo.isEmpty()){
                         System.out.println("Digite o índice do orçamento que deseja deletar: ");
                         int indice = Integer.parseInt(input.nextLine());
