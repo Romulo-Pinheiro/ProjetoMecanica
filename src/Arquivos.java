@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 public class Arquivos {
     public static void escritor(String mensagem, String diretorio, boolean acrescenta) throws IOException{
         // Em algumas situações no projeto vamos precisar sobrescrever o arquivo 
-        // (qnd deletarmos um funcionário ou cliente, por exemplo). Pra isso agr tem o boolean acrescenta
+        // (qnd deletarmos um funcionário ou cliente, por exemplo). Pra isso tem o boolean acrescenta
         BufferedWriter bw = new BufferedWriter(new FileWriter(diretorio, acrescenta));
         bw.append(mensagem+ "\n");
         bw.close();
@@ -21,14 +21,13 @@ public class Arquivos {
 
 
     public static ArrayList<String> percorreArquivo(String diretorio){
-        // Vai ser bem comum percorrer o arquivo para fazer alterações, então pra não copiar o msm código
+        // Vai ser bem comum percorrer o arquivo para fazer alterações, então pra não repetir o msm código
         // tem essa função.
 
         try {
             BufferedReader br = new BufferedReader(new FileReader(diretorio));
 
-            //Lista que irá guardar o resultado, ou seja,
-            //cada linha do arquivo que corresponde a um Funcionario
+         
             ArrayList <String> result = new ArrayList<String>();
             String linha;
             while ((linha = br.readLine()) != null) {
